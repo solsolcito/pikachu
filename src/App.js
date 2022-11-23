@@ -1,24 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import Datos from './components/Datos';
+import { useState } from 'react';
+
+
 
 function App() {
+  const [pokemon, setpokemon] = useState('')
+
+  const onChangeFn = (event) => {
+    setpokemon(event.target.value)
+  }
+  const onClickFn = () => {
+    //setpokemon( {label: pokemon})
+    console.log(pokemon,"https://pokeapi.co/api/v2/pokemon/"+pokemon)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="App">
+        <h1>Pokemon</h1>
+        <input type="text" value={pokemon} onChange={onChangeFn} />
+        <button type="button" className="btn btn-light" onClick={onClickFn}>Buscar</button>
+
+      </div>
+
+    </>
+
   );
 }
 
