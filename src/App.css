@@ -10,5 +10,10 @@ body{
 .btn btn-light{
 
   text-align: center;
+  margin-inline-start: 1px;
+}
+.imagen{
   
+  height: 350px;
+
 }

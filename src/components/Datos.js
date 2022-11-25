@@ -1,11 +1,10 @@
 
-function Datos ()
-{
+function Datos(props) {
 
-  
+
 
 
 
 
 }
- export default Datos
+export default Datos
